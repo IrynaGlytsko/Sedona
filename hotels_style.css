@@ -1,0 +1,520 @@
+:root {
+    --titleColor: #000000;
+    --subTitleColor: #333333;
+    --bgColor: #FFFFFF;
+    --textErorr: #FF5757;
+    --buttonColor: #756157;
+    --buttonSecond: #82B3D3;
+    --buttonSelect: #7DB54F;
+    --buttonSelectHover: #6C9E42;
+    --border: #E5E5E5;
+    --background: #F2F2F2;
+    --backgroundHover: #68A2CA;
+    --bgHoverBtn: #615048;
+}
+
+.main-inner {
+    background-color: rgba(130, 179, 211, 0.5);
+    background-image: url(images/background-inner.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    padding-bottom: 70px;
+}
+
+.main-inner-title {
+    color: var(--bgColor);
+    font-size: 60px;
+    line-height: 75px;
+    font-weight: 700;
+    padding-top: 35px;
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+.breadcrumbs {
+    display: flex;
+    color: var(--bgColor);
+}
+
+.breadcrumbs-item img {
+    vertical-align: middle;
+}
+
+.breadcrumbs-item {
+    margin-right: 10px;
+    margin-bottom: 40px;
+}
+
+.catalog-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.catalog-form-group:not(:last-child) {
+    border: none;
+    margin-right: 70px;
+    padding: 0;
+    margin-left: 0;
+    color: var(--bgColor);
+}
+
+.catalog-form-group-range {
+    width: 290px;
+}
+
+.catalog-form-title {
+    padding: 0;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+
+.catalog-form-item {
+    display: flex;
+    align-items: center;
+    height: 23px;
+    margin-bottom: 16px;
+    color: var(--bgColor);
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 400;
+}
+
+.control {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.control-input {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 4px;
+    margin-right: 16px;
+    position: relative;
+    width: 21px;
+    height: 21px;
+    background-color: var(--bgColor);
+    transition: 0.2s linear;
+}
+
+.radio-input {
+    border-radius: 50%;
+}
+
+.control-input::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 0;
+    height: 0;
+    background-image: url("images/check.svg");
+    background-repeat: no-repeat;
+    transition: 0.2s linear;
+}
+
+.radio-input::after {
+    background-image: url("images/padio.svg");
+}
+
+.control-input:checked::after,
+.radio-input:checked::after {
+    width: 21px;
+    height: 21px;
+    transition: 0.2s linear;
+}
+
+.catalog-range-input {
+    width: 45%;
+    margin-bottom: 36px;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+}
+
+.catalog-range-input::-webkit-outer-spin-button,
+.catalog-range-input::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+.catalog-range-input::placeholder {
+    color: var(--subTitleColor);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    vertical-align: middle;
+}
+
+.catalog-range-input:focus::placeholder {
+    border: 0;
+    color: var(--titleColor);
+}
+
+.catalog-range-input--right {
+    margin-left: -10px;
+    border-radius: 0;
+    border-left: 3px solid var(--titleColor);
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+/* Стилизация ползунка start */
+
+/* Сброс стилей */
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    background-color: transparent; /* Скрываем стандартный фон */
+}
+
+/* Удаление фокуса */
+
+input[type="range"]:focus {
+    outline: none;
+}
+
+/* Стилизация ползунка (Chrome, Safari, Edge) */
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    background-color: var(--bgColor);
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: -8px; /* Центрирование относительно трека */
+}
+
+/* Стилизация трека (Chrome, Safari, Edge) */
+
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    background-color: var(--bgColor);
+    border-radius: 2px;
+}
+
+/* Стилизация ползунка (Firefox) */
+
+input[type="range"]::-moz-range-thumb {
+    height: 20px;
+    width: 20px;
+    background-color: var(--bgColor);
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+}
+
+/* Стилизация трека (Firefox) */
+
+input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 4px;
+    background-color: var(--bgColor);
+    border-radius: 2px;
+}
+
+/* Стилизация ползунка end */
+
+.catalog-buttons-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+    margin-top: 50px;
+}
+
+.catalog-button {
+    border: none;
+    padding: 8px 50px;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    background-color: var(--buttonSecond);
+    color: var(--bgColor);
+    border-radius: 4px;
+    transition: 0.2s linear;
+}
+
+.catalog-button:hover {
+    background-color: var(--backgroundHover);
+}
+
+.catalog-button--transparent {
+    background-color: transparent;
+    margin-bottom: 0;
+}
+
+.catalog-button--transparent:hover {
+    opacity: 0.5;
+    background-color: transparent;
+}
+
+.catalog-button--transparent:focus {
+    outline: none;
+    border: 3px solid var(--buttonSecond)
+}
+
+.catalog-hotels-description {
+    margin: 50px 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.catalog-hotels-title {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+    color: var(--titleColor);
+    text-transform: uppercase;
+    margin-right: 12%;
+}
+
+.catalog-hotels-select-control {
+    padding: 14px 20px;
+    border: 2px solid var(--border);
+    border-radius: 4px;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+    color: var(--subTitleColor);
+    width: 292px;
+    margin-right: 70px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("images/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: right 20px top 50%;
+}
+
+.catalog-hotels-display-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.catalog-hotels-display-item {
+    width: 48px;
+    height: 48px;
+    border: 2px solid var(--border);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s linear;
+}
+
+.catalog-hotels-display-item:hover {
+    border: 2px solid var(--titleColor);
+}
+
+.catalog-hotels-display-item:first-child {
+    border: 2px solid var(--titleColor);
+}
+
+.catalog-hotels-display-item:not(:last-child) {
+    margin-right: 8px;
+}
+
+.hotels {
+    margin-bottom: 40px;
+}
+
+.hotels-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.hotels-card {
+    border: 1px solid var(--border);
+    width: 340px;
+    height: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr, 1fr, 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 16px 20px;
+    border-radius: 4px;
+}
+
+.hotels-item-link {
+    display: grid;
+    grid-column: 1 / 3;
+    text-decoration: none;
+}
+
+.hotels-item-img {
+    width: 100%;
+}
+
+.hotels-item-title {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+    color: var(--titleColor);
+}
+
+.hotels-text {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+    color: var(--subTitleColor);
+    text-align: left;
+}
+
+.hotels-price {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+    color: var(--subTitleColor);
+    text-align: right;
+}
+
+.hotels-button {
+    text-transform: uppercase;
+    text-decoration: none;
+    width: 140px;
+    padding: 8px;
+    color: var(--bgColor);
+    background-color: var(--buttonColor);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    transition: 0.2s linear;
+}
+
+.hotels-button:hover {
+    background-color: var(--bgHoverBtn);
+}
+
+.hotels-favorites {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: var(--bgColor);
+    width: 140px;
+    padding: 8px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    border: none;
+    background-color: var(--buttonSecond);
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.hotels-favorites:hover {
+    background-color: var(--backgroundHover);
+}
+
+.hotels-favorites-green {
+    background-color: var(--buttonSelect);
+}
+
+.hotels-favorites-green:hover {
+    background-color: var(--buttonSelectHover);
+}
+
+.hotels-stars {
+    width: 140px;
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+}
+
+.hotels-stars img {
+    margin-right: 6px;
+}
+
+.hotels-raiting {
+    width: 140px;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: var(--subTitleColor);
+    background-color: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.paginations-list {
+    border-top: 1px solid var(--border);
+    padding: 40px 0 60px;
+    display: flex;
+    align-items: center;
+}
+
+.paginations-item {
+    min-width: 60px;
+    height: 60px;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: var(--buttonSecond);
+    font-size: 20px;
+    line-height: 36px;
+    font-weight: 700;
+    display: flex;
+    margin-right: 8px;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s linear;
+}
+
+.paginations-item:last-child {
+    margin-right: 0;
+}
+
+.paginations-item:hover:not(:first-child) {
+    background-color: var(--backgroundHover);
+}
+
+.paginations-item-current {
+    background-color: var(--background);
+    color: var(--titleColor);
+}
+
+.paginations-link {
+    text-decoration: none;
+    color: var(--bgColor);
+}
+
+.paginations-link-current {
+    color: var(--titleColor);
+}
+
+.hotels-subscribe {
+    background-image: none;
+    background-color: var(--bgColor);
+}
+
+.hotels-subscribe-title {
+    color: var(--titleColor);
+}
+
+.hotels-subscribe-text {
+    color: var(--subTitleColor);
+}
